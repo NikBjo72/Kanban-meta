@@ -1,0 +1,265 @@
+* {
+    font-family: sans-serif;
+    margin: 0px;
+}
+header {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    background-color: black;
+    min-height: 7rem;
+    height: auto;
+}
+
+header>h1 {
+    color: white;
+    width: 50%;
+}
+
+#loginform {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: right;
+    width: 50%;
+}
+#username{
+    width: 8.5rem;
+    margin: 0.2rem;
+}
+#password{
+    width: 8.5rem;
+    margin: 0.2rem;
+}
+
+#logoutForm {
+    display: flex;
+    justify-content: right;
+    width: 50%;
+    display: none;
+}
+
+#loginBtn {
+    background-color: #226EDD;
+    color: white;
+    padding: 4px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    width: 9rem;
+    margin: 0.2rem;
+}
+#wrongCredentials{
+    display: none;
+    color: #ff0000;
+
+}
+
+#logoutBtn {
+    background-color: #FF6700;
+    color: white;
+    padding: 4px 32px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 16px;
+    /* logout-knapp dold som standard */
+}
+
+#loggedInAsName{
+    color: cyan;
+    margin-top: auto;
+    margin-bottom: auto;
+    margin-right: 2rem;
+}
+#loggedInAs{
+    color: white;
+    margin-top: auto;
+    margin-bottom: auto;
+}
+
+body {
+    min-height: 98vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.kanbanBoard {
+    padding: 4rem 2rem 4rem 2rem;
+    display: flex;
+    column-gap: 25px;
+    align-items:flex-start;
+    justify-content: center;
+}
+
+.kanbanColumn {
+    min-height: 10rem;
+    border-radius: 5px;
+    justify-content: space-between;
+    padding: 1rem;
+    
+}
+.outerKanbanColumn{
+    background-color: #BCBCBC;
+    margin: 0.5rem;
+    width: 370px;
+    height: auto;
+    overflow:hidden;
+    border-radius: 5px;
+}
+.outerKanbanColumn > h2 {
+    padding-left: 1.6rem;
+    margin-top: 1rem;
+}
+
+.kanbanNewCardBtn {
+    all: unset;
+    color: black;
+    -webkit-text-fill-color: black;
+    cursor: pointer;
+    padding-left: 25px;
+    padding-bottom: 10px;
+    display: none;
+    /* Lägg till ett kort-knapparna dold som standard */
+}
+
+.kanbanCard {
+    padding: 1rem;
+    word-wrap: break-word;
+    background-color: white;
+    width: auto;
+    height: auto;
+    border-radius: 5px;
+    cursor: move;
+}
+
+#removeCardBtn {
+    background-color: #ff0000;
+    color: white;
+    padding: 0.3rem 0.4rem;
+    margin-top:  0.6rem;
+    margin-bottom: 0.3rem;
+    text-decoration: none;
+    font-size: 12px;
+}
+
+#changeCardBtn {
+    background-color: #226edd;
+    color: white;
+    padding: 0.3rem 0.4rem;
+    text-decoration: none;
+    font-size: 12px;
+}
+#saveCardBtn{
+    background-color: #226edd;
+    color: white;
+    padding: 2px 32px;
+    margin: 8px;
+    text-decoration: none;
+    font-size: 12px;
+}
+textarea {
+    border-radius: 5px;
+    max-width: max-content;
+    min-width: 100%;
+    margin-top: 10px;
+    width: 0px;
+}
+.savedText {
+    border: 1px solid grey;
+    border-radius: 7px;
+    padding: 7px;
+    background-color: white;
+}
+.cardNumber {
+    /* border: 1px dotted pink; */
+    display: flex;
+    flex-direction: row-reverse;
+    margin: 2px;
+}
+.discardButton{
+    border-radius: 10px;
+    border: none;
+    background-color: white;
+    font-size: larger;
+    font-family: monospace;
+    margin-top: 10px;
+}
+.discardButtonContainer {
+    display: flex;
+    flex-direction: row-reverse;
+    width: 100%;
+    align-items: flex-start;
+}
+footer {
+    margin-top: auto;
+    text-align: center;
+    font-size: 20px;
+}
+
+#popUpBox {
+    padding: 1rem;
+    background-color: rgb(98, 98, 98);
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: auto;
+    border: 1rem;
+    border-radius: 2px;
+    margin: 40%;
+
+}
+
+#changeText {
+    background-color: #f4f4f4;
+    margin: auto;
+    padding: 5%;
+    min-width: 90%;
+    min-height: 150px;
+    size: auto;
+    border-radius: 10px;
+    
+}
+
+#saveBtn {
+    border-radius: 5px;
+    background-color: #226edd;
+    color: white;
+    width: 100px;
+    margin-top: 15px;
+}
+
+#popUpContainer {
+    display: flex;
+    justify-content: center;
+    background-color: rgb(0, 0, 0);
+    background-color: rgba(0, 0, 0, 0.5);
+    text-align: center;
+    left: 0;
+    top: 0;
+    position: fixed;
+    z-index: 1;
+    padding-top: 5px;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    border: 15px solid grey;
+    flex-direction: inherit;
+}
+
+@media only screen and (max-width: 600px) {
+    header>h1 {
+        font-size: 25px;
+        text-align: center;
+    }
+
+    #loginform {
+        text-align: center;
+    }
+
+    .kanbanBoard {
+        flex-direction: column;
+    }
+}
